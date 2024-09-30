@@ -10,7 +10,6 @@ class KnowledgeBase:
         color_matches = 0
         secret_copy = secret.copy()
 
-        # Contar los colores que son correctos y están en la posición correcta
         for i in range(4):
             if guess[i] == secret[i]:
                 exact_matches += 1
