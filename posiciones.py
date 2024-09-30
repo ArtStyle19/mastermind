@@ -9,18 +9,16 @@ class KnowledgeBase:
         exact_matches = 0
         secret_copy = secret.copy()
 
-        # Contar los colores que son correctos y están en la posición correcta
         for i in range(4):
             if guess[i] == secret[i]:
                 exact_matches += 1
-                secret_copy[i] = None  # Marcar el color como contado en la combinación secreta
+                secret_copy[i] = None
 
         return exact_matches
 
     def check_rules(self, guess):
         feedback = []
         for i, color in enumerate(guess):
-            # Verificar si el color está en la combinación secreta
             color_found = False
             position_correct = False
             
